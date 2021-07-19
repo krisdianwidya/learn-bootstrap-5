@@ -8,11 +8,14 @@
     <title>Learning Bootstrap v5 with sass</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <!-- START THE NAVBAR SECTION -->
-    <nav class="navbar navbar-expand-lg navbar-dark menu">
+    <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="images/logo.png" alt="logo image">
@@ -52,7 +55,64 @@
         </div>
     </nav>
 
-    <script src="assets/js/bootstrap.bundle.js"></script>
+    <!-- START THE INTRO SECTION -->
+
+    <section id="home" class="intro-section">
+        <div class="container">
+            <div class="row align-items-center text-white">
+                <!-- START THE CONTENT FOR THE INTRO -->
+                <div class="col-md-6 intros text-start">
+                    <h1 class="display-2">
+                        <span class="display-2--intro">
+                            Hey!, I'm Patrick
+                        </span>
+                        <span class="display-2--description lh-base">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas libero, in explicabo
+                            aperiam ipsum deleniti quae facilis.
+                        </span>
+                    </h1>
+                    <button type="button" class="rounded-pill btn-rounded">Get in Touch
+                        <span>
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </button>
+                </div>
+                <!-- START THE CONTENT FOR THE VIDEO -->
+                <div class="col-md-6 intros text-end">
+                    <div class="video-box">
+                        <img src="images/arts/intro-section-illustration.png" alt="video illustration"
+                            class="img-fluid">
+                        <a href="#" class="glightbox">
+                            <span>
+                                <i class="fas fa-play-circle"></i>
+                            </span>
+                            <span class="border-animation border-animation--border-1"></span>
+                            <span class="border-animation border-animation--border-2"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1"
+                d="M0,128L30,112C60,96,120,64,180,90.7C240,117,300,203,360,208C420,213,480,139,540,106.7C600,75,660,85,720,117.3C780,149,840,203,900,197.3C960,192,1020,128,1080,122.7C1140,117,1200,171,1260,197.3C1320,224,1380,224,1410,224L1440,224L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+
+    <script src="/assets/vendors/js/glightbox.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.js"></script>
+
+    <script type="text/javascript">
+        const lightbox = GLightbox({
+            'href': 'https://www.youtube.com/watch?v=iJKCj8uAHz8&ab_channel=freeCodeCamp.org',
+            'type': 'video',
+            'source': 'youtube', //vimeo, youtube or local
+            'width': 900,
+            'autoPlayVideos': 'true'
+        });
+
+    </script>
 </body>
 
 </html>
